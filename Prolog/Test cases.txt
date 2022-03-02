@@ -1,0 +1,20 @@
+Test cases
+
+Theorems:
+
+test(some(v(x), all(v(y), r(v(x), v(y)))) imp all(v(y), some(v(x), r(v(x), v(y)))), 2).
+
+test(all(v(x), p(v(x)) or q(v(x))) imp (some(v(x), p(x)) or all(v(x), q(x))), 2).
+
+test(some(v(x), p(v(x)) imp all(v(x), p(v(x)))), 2).
+
+test(some(v(x), p(v(x)) and q(v(x))) imp (some(v(x), p(v(x))) and some(v(x), q(v(x)))), 2).
+
+test(some(v(x), p(v(x)) or q(v(x))) imp (some(v(x), p(v(x))) or some(v(x), q(v(x)))), 2).
+
+Trans = all(v(x), all(v(y), all(v(z), (r(v(x),v(y)) and r(v(y),v(z))) imp r(v(x),v(z))))), Sym = all(v(x), all(v(y), r(v(x),v(y)) imp r(v(y),v(x)))), Nontriv = all(v(x), some(v(y), r(v(x),v(y)))), Ref = all(v(x), r(v(x),v(x))), test(((Nontriv and Sym) and Trans) imp Ref, 6).
+Note: swapping Nontriv and Trans will break the code.
+
+Not theorems:
+
+test(all(v(x), some(v(y), r(v(x), v(y)))) imp some(v(y), all(v(x), r(v(x), v(y)))), 100).
