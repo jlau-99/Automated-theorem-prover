@@ -6,4 +6,4 @@ Usage:
 
 test(prop, depth).
 
-will return whether it is possible to prove prop using at most n=depth gamma rules. Gamma rules are substitutions of variables into a proposition starting with for-all.
+will return whether it is possible to prove prop using at most n=depth gamma rules. Gamma rules are substitutions of variables in a proposition starting with for-all.
